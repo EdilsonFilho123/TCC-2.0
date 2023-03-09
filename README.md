@@ -22,12 +22,12 @@ A aplicação é um sistema de gerenciamento de projetos voltados à contrução
 ## Edilson Claudio Silvestrini Filho
 - [Email](mailto:edilsonlinefilho@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/edilson-claudio-silvestrini-filho/)
-- [Celular / Whatsapp](https://api.whatsapp.com/send?phone=5519983724834)
+- [Whatsapp](https://api.whatsapp.com/send?phone=5519983724834)
 ## Isabele Barbosa
 - [Email](mailto:isabelesbarbosa@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/isabeles/)
-- [Celular / Whatsapp](https://api.whatsapp.com/send?phone=5519995753497)
+- [Whatsapp](https://api.whatsapp.com/send?phone=5519995753497)
 ## Letícia Tosin
 - [Email](mailto:lehtosin@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/let%C3%ADcia-tosin-b49629206/)
-- [Celular / Whatsapp](https://api.whatsapp.com/send?phone=5519992976561)
+- [Whatsapp](https://api.whatsapp.com/send?phone=5519992976561)
