@@ -16,7 +16,7 @@ A aplicação é um sistema de gerenciamento de projetos voltados à contrução
 ## Front-End
 - HTML / CSS / JavaScript / TypeScript
 - Node JS
-- React JS
+- Vue JS
 
 # Autores
 ## Edilson Claudio Silvestrini Filho
