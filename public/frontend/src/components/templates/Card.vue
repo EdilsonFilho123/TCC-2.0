@@ -1,10 +1,10 @@
 <template>
     <!-- <div class="card"> -->
-    <b-card title="LIE" style="max-width: 50vw; text-align: center; position: relative;" class="mb-2">
-        <slot></slot>
-        
-        <div class="mb-2"></div>
-        <div class="footer"><slot name="footer"></slot></div>
+    <b-card title="LIE" style="min-width: 50%; text-align: center; position: relative;" class="mb-2">
+        <div class="container">
+            <div class="mb-2"><slot></slot></div>
+            <div class="footer"><slot name="footer"></slot></div>
+        </div>
     </b-card>
     <!-- </div> -->
 </template>
@@ -27,14 +27,11 @@ export default {
     .footer {
         position: absolute;
         bottom: 0px;
+        left: 0px;
 
-        width: calc(100% - 40px);
+        width: 100%;
 
         font-size: 10px;
         color: gray;
-
-        /* display: inline-block;
-        text-align: center; */
-        margin: 0 auto;
     }
 </style>
