@@ -6,6 +6,7 @@ import LoginTemplate from '@/components/layouts/LoginTemplate'
 
 import Login from '@/components/pages/Login'
 import Cadastro from '@/components/pages/Cadastro'
+import Home from '@/components/pages/Home'
 import Project from '@/components/Project'
 
 Vue.use(Router)
@@ -17,6 +18,11 @@ const rotas = new Router({
             path: '/',
             component: HomeTemplate,
             children: [
+                {
+                    name: 'home',
+                    path: '',
+                    component: Home
+                },
                 {
                     name: 'project',
                     path: 'project',
