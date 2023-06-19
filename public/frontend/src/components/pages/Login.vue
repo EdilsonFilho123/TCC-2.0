@@ -1,14 +1,15 @@
 <template>
     <Card>
         <div>
+            <Divisor txt="ou"/>
             <InputValidation v-model="email" id="email" type="email" label="E-mail:" place="Digite seu E-mail" :validade="emailValidade" />
             <InputValidation v-model="password" id="password" type="password" label="Senha:" place="Digite sua senha" :validade="passwordValidade" />
             <div class="control mt-4">
-                <b-button variant="primary" @click="validaForm">Entrar</b-button>
+                <b-button variant="primary" @click="validaForm">Prossegir</b-button>
                 <div class="link">Não tem conta? <router-link to="/cadastro">Criar cadastro</router-link></div>
             </div>
         </div>
-        <footer slot="footer">Ao clicar acima, você concorda com os e Termos de serviço e Política de privacidade do LIE.</footer>
+        <footer slot="footer">Ao clicar acima, você concorda com os <span class="link"><router-link to="/lgpd">Termos de serviço e Política de privacidade</router-link></span> do LIE.</footer>
     </Card>
 </template>
 
@@ -70,7 +71,7 @@
 
     .link, .link a, .link a:hover{
         font-size: 12px;
-        color: #4858b2;
+        color: #6c757d;
     }
 
     .link a {

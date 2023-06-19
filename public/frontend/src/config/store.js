@@ -1,17 +1,60 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-// import carrinho from './modules/carrinho'
-// import parametros from './modules/parametros'
-
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        nome: 'Maria',
-        sobrenome: 'Silva',
-        // cor1: '3711A6',
-        // cor2: '3711A6'
+        user: {
+            id: 1,
+            name: 'Edilson',
+            email: "teste@gmail.com",
+            nivel: 0
+        },
+        projects: [],
+        tasks: [],
+        isMenuVisible: false
     },
-    // modules: { carrinho, parametros }
+    getters: {
+        getUser(state) {
+            return state.user
+        },
+        getProjects(state) {
+            return state.projects
+        },
+        getTasks(state) {
+            return state.tasks
+        },
+        getMenuVisibility(state) {
+            return state.isMenuVisible
+        }
+    },
+    mutations: {
+        setUser(state, payload) {
+            state.user = payload
+        },
+        setProjects(state, payload) {
+            state.projects = payload
+        },
+        setTasks(state, payload) {
+            state.tasks = payload
+        },
+        setMenuVisible(state, payload) {
+            state.isMenuVisible = payload
+        },
+        toggleMenu(state) {
+            state.isMenuVisible = !state.isMenuVisible;
+        },
+    },
+    actions: {
+        setUser({ commit }, payload) {
+            commit('setUser', payload)
+        },
+        setProjects({ commit }, payload) {
+            commit('setProjects', payload)
+        },
+        setTasks({ commit }, payload) {
+            commit('setTasks', payload)
+        }
+    }
 })

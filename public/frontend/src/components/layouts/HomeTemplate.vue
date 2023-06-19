@@ -1,16 +1,28 @@
 <template>
-    <div id="home">
-        <header />
-		<menu />
-        <router-view></router-view>
-		<footer />
+    <div id="home" :class="{'hide-menu': !isMenuVisible || !user}">
+        <Header />
+		<Menu />
+        <div class="content"><router-view></router-view></div>
+		<Footer />
     </div>
 </template>
 
 <script>
+	import Footer from '../templates/Footer.vue';
+	import Header from '../templates/Header.vue';
+	import Menu from '../templates/Menu.vue';
+
     export default {
-        
-    }
+		components: { Header, Footer, Menu },
+		computed: {
+			isMenuVisible(){
+                return this.$store.state.isMenuVisible;
+			},
+			user(){
+                return this.$store.state.user;
+			}
+		}
+	}
 </script>
 
 <style scoped>
@@ -32,9 +44,15 @@
     }
 
 	#home.hide-menu {
+		grid-template-columns: 1fr;
 		grid-template-areas:
-			"header header"
-			"content content"
-			"footer footer";
+			"header"
+			"content"
+			"footer";
 	}
+
+	/* .content{
+		width: 100%;
+		background-color: chocolate;
+	} */
 </style>

@@ -6,10 +6,10 @@
             <InputValidation v-model="passwordConfirmation" id="passwordConfirmation" type="password" label="Confirmação de senha:" place="Digite sua senha novamente" :validade="passwordConfirmationValidade()" />
             <div class="control mt-4">
                 <b-button variant="primary" @click="validaForm">Cadastrar</b-button>
-                <div class="link">Já tem cadastro? Efetuar <router-link to="/login">Login</router-link></div>
+                <div class="link">Já possui cadastro? Efetuar <router-link to="/login">Login</router-link></div>
             </div>
         </div>
-        <footer slot="footer">Ao clicar acima, você concorda com os e Termos de serviço e Política de privacidade do LIE.</footer>
+        <footer slot="footer">Ao clicar em cadastrar-se, você concorda com os <span class="link"><router-link to="/lgpd">Termos de serviço e Política de privacidade</router-link></span> do LIE.</footer>
     </Card>
 </template>
 
@@ -78,7 +78,7 @@ export default {
 
     .link, .link a, .link a:hover{
         font-size: 12px;
-        color: #4858b2;
+        color: #6c757d;
     }
 
     .link a {

@@ -1,8 +1,8 @@
 <template>
     <div class="login">
         <transition mode="out-in" 
-			enter-active-class="animated bounce" 
-			leave-active-class="animated shake"
+			enter-active-class="animated fadeInLeft" 
+			leave-active-class="animated fadeOutRight"
         >
             <router-view></router-view>
         </transition>

@@ -33,4 +33,10 @@
     .input_validate{
         text-align: left;
     }
+    input::placeholder{
+        color: #ced4da;
+    }
+    label{
+        color: #9D9D9D;
+    }
 </style>
