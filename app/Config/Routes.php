@@ -34,10 +34,14 @@ $routes->set404Override();
 $routes->get('/usuario/getAll', 'UsuarioController::getAll');
 $routes->post('/usuario/insert', 'UsuarioController::insert');
 
-$routes->group('/tipoArquivo', 
-    $routes->get('/getAll', 'TipoArquivoController::getAll'),
-    $routes->post('/insert', 'TipoArquivoController::insert'),
-);
+$routes->get('/projeto/getAll', 'ProjetoController::getAll');
+$routes->post('/projeto/insert', 'ProjetoController::insert');
+
+$routes->get('/atividade/getAll', 'AtividadeController::getAll');
+$routes->post('/atividade/insert', 'AtividadeController::insert');
+
+$routes->get('/arquivo/getAll', 'ArquivoController::getAll');
+$routes->post('/arquivo/insert', 'ArquivoController::insert');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

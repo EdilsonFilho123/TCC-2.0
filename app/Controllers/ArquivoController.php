@@ -3,19 +3,19 @@
 namespace App\Controllers;
 use CodeIgniter\API\ResponseTrait;
 
-class UsuarioController extends BaseController
+class ArquivoController extends BaseController
 {
     use ResponseTrait;
-    private $usuarioModel;
+    private $ArquivoModel;
 
     public function __construct()
     {
-        $this->usuarioModel = new \App\Models\UsuarioModel();
+        $this->ArquivoModel = new \App\Models\ArquivoModel();
     }
 
     public function getAll()
     {
-        $this->respond($this->usuarioModel->findAll(), 200);
+        $this->respond($this->ArquivoModel->findAll(), 200);
     }
 
     public function insert()

@@ -3,19 +3,19 @@
 namespace App\Controllers;
 use CodeIgniter\API\ResponseTrait;
 
-class UsuarioController extends BaseController
+class ProjetoController extends BaseController
 {
     use ResponseTrait;
-    private $usuarioModel;
+    private $ProjetoModel;
 
     public function __construct()
     {
-        $this->usuarioModel = new \App\Models\UsuarioModel();
+        $this->ProjetoModel = new \App\Models\ProjetoModel();
     }
 
     public function getAll()
     {
-        $this->respond($this->usuarioModel->findAll(), 200);
+        $this->respond($this->ProjetoModel->findAll(), 200);
     }
 
     public function insert()
