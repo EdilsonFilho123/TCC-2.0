@@ -4,7 +4,7 @@
             <i class="fa fa-lg" :class="!isMenuVisible ? 'fa-bars' : 'fa-times'"></i>
         </a>
         <h1 class="title">
-            <router-link to="/login">LIE</router-link>
+            <router-link to="/">LIE</router-link>
         </h1>
         <UserController v-if="isLogged" />
         <button v-else class="btn" @click="session_init">Iniciar sessão</button>
