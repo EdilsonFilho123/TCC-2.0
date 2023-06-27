@@ -29,7 +29,7 @@
     #home {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-        max-width: 100vw;
+        min-width: 100vw;
         /* max-height: 100vh; */
         min-height: 100vh;
         background: #F0F0F0;

@@ -3,13 +3,17 @@ import Router from 'vue-router'
 
 import HomeTemplate from '@/components/layouts/HomeTemplate'
 import LoginTemplate from '@/components/layouts/LoginTemplate'
-import ProjectTemplate from '@/components/layouts/ProjectTemplate'
 
 import Login from '@/components/pages/Login'
 import Cadastro from '@/components/pages/Cadastro'
 import Home from '@/components/pages/Home'
 import LGPD from '@/components/pages/LGPD'
 import Painel from '@/components/pages/Painel'
+import Termo from '@/components/pages/project/Termo'
+import Titulo from '@/components/pages/project/Titulo'
+import Participantes from '@/components/pages/project/Participantes'
+import Prazo from '@/components/pages/project/Prazo'
+import Uploads from '@/components/pages/project/Uploads'
 import Project from '@/components/Project'
 
 Vue.use(Router)
@@ -42,20 +46,29 @@ const rotas = new Router({
                     component: Painel
                 },
                 {
-                    path: '/project',
-                    component: ProjectTemplate,
-                    children: [
-                        {
-                            name: 'login',
-                            path: '/1',
-                            component: Login
-                        },
-                        // {
-                        //     name: 'cadastro',
-                        //     path: '/2',
-                        //     component: Cadastro
-                        // }
-                    ]
+                    path: '/newProject/1',
+                    name: 'termo',
+                    component: Termo
+                },
+                {
+                    path: '/newProject/2',
+                    name: 'titulo',
+                    component: Titulo
+                },
+                {
+                    path: '/newProject/3',
+                    name: 'participantes',
+                    component: Participantes
+                },
+                {
+                    path: '/newProject/4',
+                    name: 'prazo',
+                    component: Prazo
+                },
+                {
+                    path: '/newProject/5',
+                    name: 'uploads',
+                    component: Uploads
                 }
             ]
         },
