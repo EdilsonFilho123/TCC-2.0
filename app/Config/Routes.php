@@ -31,6 +31,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 // $routes->get('/page', 'PageController::index');
 
+$routes->post('/login', 'UsuarioController::getUsuario');
 $routes->get('/usuario/getAll', 'UsuarioController::getAll');
 $routes->post('/usuario/insert', 'UsuarioController::insert');
 
@@ -42,6 +43,7 @@ $routes->post('/atividade/insert', 'AtividadeController::insert');
 
 $routes->get('/arquivo/getAll', 'ArquivoController::getAll');
 $routes->post('/arquivo/insert', 'ArquivoController::insert');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

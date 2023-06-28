@@ -8,12 +8,20 @@ export default new Vuex.Store({
         user: {
             id: 1,
             name: 'Edilson',
-            email: "teste@gmail.com",
-            nivel: 0
+            email: "teste@gmail.com"
         },
         projects: [],
         tasks: [],
-        isMenuVisible: false
+        isMenuVisible: false,
+        newProject: {
+            termo: '',
+            titulo: '',
+            descricao: '',
+            participantes: [],
+            prazoInicial: '',
+            prazoFinal: '',
+            uploads: [],
+        }
     },
     getters: {
         getUser(state) {
@@ -27,7 +35,10 @@ export default new Vuex.Store({
         },
         getMenuVisibility(state) {
             return state.isMenuVisible
-        }
+        },
+        getNewProject(state){
+            return state.newProject
+        },
     },
     mutations: {
         setUser(state, payload) {
@@ -44,6 +55,9 @@ export default new Vuex.Store({
         },
         toggleMenu(state) {
             state.isMenuVisible = !state.isMenuVisible;
+        },
+        setNewProject(state, payload) {
+            state.newProject = payload;
         },
     },
     actions: {

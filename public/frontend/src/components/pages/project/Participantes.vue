@@ -6,8 +6,8 @@
             <!-- <label for="list" class="ml-1">Participantes:</label> -->
             <List id="list" title="Participantes" type="close" :data="part" k="nome" />
             <div class="controll mt-2">
-                <Button width="150px" txt="Limpar" class="btn"></Button>
-                <Button width="150px" txt="Adicionar" class="btn"></Button>
+                <Button width="20%" txt="Limpar" class="btn"></Button>
+                <Button width="20%" txt="Adicionar" class="btn"></Button>
             </div>
         </div>
     </ProjectTemplate>

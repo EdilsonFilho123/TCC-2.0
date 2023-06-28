@@ -30,7 +30,9 @@ class UsuarioModel extends Model {
         ],
     ];
 
-    
+    public function getUsuario($email, $senha){
+        return $this->db->table('usuario')->where('usu_email', $email)->where('usu_senha', $senha)->get()->getRow();
+    }
 }
 
 ?>

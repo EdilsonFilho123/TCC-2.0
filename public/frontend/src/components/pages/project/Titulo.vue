@@ -14,10 +14,22 @@
 
     export default {
         components: { ProjectTemplate },
-        data() {
-            return {
-                titulo: '',
-                descricao: ''
+        computed: {
+            titulo: {
+                get () {
+                    return this.$store.state.newProject.titulo
+                },
+                set (valor) {
+                    this.$store.state.newProject.titulo = valor
+                }
+            },
+            descricao: {
+                get () {
+                    return this.$store.state.newProject.descricao
+                },
+                set (valor) {
+                    this.$store.state.newProject.descricao = valor
+                }
             }
         }
     }

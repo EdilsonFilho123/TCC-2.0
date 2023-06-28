@@ -1,7 +1,7 @@
 <template>
     <Card>
         <div>
-            <Divisor txt="ou"/>
+            <!-- <Divisor txt="ou"/> -->
             <InputValidation v-model="email" id="email" type="email" label="E-mail:" place="Digite seu E-mail" :validade="emailValidade" />
             <InputValidation v-model="password" id="password" type="password" label="Senha:" place="Digite sua senha" :validade="passwordValidade" />
             <div class="control mt-4">
@@ -17,6 +17,8 @@
     import InputValidation from '../form/InputValidation.vue';
     import Divisor from '../others/Divisor.vue';
     import Card from '../templates/Card.vue';
+    // import { baseApiUrl, showError, userKey } from '@/global';
+    // import axios from 'axios';
 
     export default {
         components: { Card, Divisor, InputValidation },
@@ -46,7 +48,22 @@
         },
         methods: {
             validaForm(){
-                return true;
+                const validadeEmail = this.emailValidade(this.email);
+                const validadePassword = this.passwordValidade(this.password);
+
+                if(JSON.stringify(validadeEmail) == JSON.stringify(validadePassword) && !validadeEmail.msg && validadeEmail.css)
+                    this.login();
+            },
+            login(){
+                // axios.post(`${baseApiUrl}/login`, { email: this.email, senha: this.password }).then(res => {
+                //     this.$store.commit('setUser', {
+                //         id: res.data.usu_id,
+                //         name: res.data.usu_nome,
+                //         email: res.data.usu_email
+                //     });
+                //     localStorage.setItem(userKey, JSON.stringify(this.$store.state.user));
+                //     this.$router.push({ path: '/painel' })
+                // }).catch(showError)
             }
         },
         created() {

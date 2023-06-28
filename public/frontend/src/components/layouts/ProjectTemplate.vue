@@ -1,5 +1,5 @@
 <template>
-    <div class="termo">
+    <div class="project">
         <StatusNewProject :nivel="etapa" class="mt-3" />
         <div class="content">
             <slot></slot>
@@ -54,11 +54,13 @@
         color: #FFF;
     }
 
-    .termo {
-        height: 300px;
+    .project {
+        min-height: 300px;
+        height: 100%;
     }
 
     .content{
+        height: 100%;
         padding: 10px;
         height: auto;
     }

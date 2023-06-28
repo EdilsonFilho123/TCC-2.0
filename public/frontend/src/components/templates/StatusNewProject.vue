@@ -64,4 +64,10 @@
         border-bottom: transparent;
         border-left: transparent;
     }
+
+    p{
+        font-family: 'Libre Baskerville', serif;
+        font-family: 'Domine', serif;
+        font-weight: 400;
+    }
 </style>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 export const userKey = '__user'
-export const baseApiUrl = 'http://localhost:3000'
+export const baseApiUrl = 'http://localhost:8000'
 
 export function showError(e) {
     var obj;

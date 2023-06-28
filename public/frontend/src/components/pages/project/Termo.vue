@@ -1,5 +1,5 @@
 <template>
-    <ProjectTemplate etapa="1" btn="Pular">
+    <ProjectTemplate etapa="1" :btn="(!termo ? 'Pular' : 'P')">
         <h2 class="mt-4 mb-3">Digite seu Termo de Abertura:</h2>
         <VueEditor class="edit" v-model="termo" placeholder="Informe o Termo de Abertura..." />
     </ProjectTemplate>
@@ -11,9 +11,14 @@
 
     export default {
         components: { ProjectTemplate, VueEditor },
-        data(){
-            return {
-                termo: ''
+        computed: {
+            termo: {
+                get () {
+                    return this.$store.state.newProject.termo
+                },
+                set (valor) {
+                    this.$store.state.newProject.termo = valor
+                }
             }
         }
     }

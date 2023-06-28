@@ -15,12 +15,17 @@ class UsuarioController extends BaseController
 
     public function getAll()
     {
-        $this->respond($this->usuarioModel->findAll(), 200);
+        return $this->respond($this->usuarioModel->findAll(), 200);
     }
 
     public function insert()
     {
         return die(var_dump($this->request->getJSON()));
+    }
+
+    public function getUsuario(){
+        $usuario = $this->usuarioModel->getUsuario($this->request->getPost('email'), $this->request->getPost('senha'));
+        return $this->respond($usuario, (!$usuario ? 404 : 200));
     }
 
 }
